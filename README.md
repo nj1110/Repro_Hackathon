@@ -18,9 +18,9 @@ Objective of this pipeline is to reproduce the analyses led in 2 publications (H
 ## Organization
 - a subfolder with dockerfiles
 - three snakefiles with workflows:
-    -- one worklfow to download data and create index
-    -- one workflow for mapping and counts ... 
-    -- one worflow for ...
+    - one worklfow to download data and create index
+    - one workflow for mapping and counts  
+    - one worflow for XXX
 - a README file  
 - a RUN file
 
