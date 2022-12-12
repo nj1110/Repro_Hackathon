@@ -20,7 +20,7 @@ Objective of this pipeline is to reproduce the analyses led in 2 publications (H
 - three snakefiles with workflows:
     - one worklfow to download data and create index
     - one workflow for mapping and counts  
-    - one worflow for XXX
+    - one worflow for differential gene expression analysis
 - a README file  
 - a RUN file
 
