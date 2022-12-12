@@ -27,4 +27,4 @@ rule dispersion_genes:
         "froeuhouais/r_image"
     # Exécution du script R
     shell:
-        'docker run -v $(pwd):/dossier/ -it froeuhouais/r_image Rscript dossier/script_8SRR_v5.R'
+        'docker run -v $(pwd):/dossier/ -it froeuhouais/r_image Rscript dossier/Stat_Analysis/script_8SRR_v5.R'
