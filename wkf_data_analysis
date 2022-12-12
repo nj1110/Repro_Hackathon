@@ -7,8 +7,8 @@ rule all:
     input:
         "PCA_hackathon.pdf",
         "heatmap.pdf",
-        "residuals_pvalue.pdf"
-        "volcano_plot_genes.pdf"
+        "residuals_pvalue.pdf",
+        "volcano_plot_genes.pdf",
         "volcano_plot_all_genes.pdf"
 
 rule dispersion_genes:
@@ -19,8 +19,8 @@ rule dispersion_genes:
     output:
         "PCA_hackathon.pdf",
         "heatmap.pdf",
-        "residuals_pvalue.pdf"
-        "volcano_plot_genes.pdf"
+        "residuals_pvalue.pdf",
+        "volcano_plot_genes.pdf",
         "volcano_plot_all_genes.pdf"
     # Utilisation de l'image Docker
     container:
