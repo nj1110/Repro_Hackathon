@@ -1,0 +1,21 @@
+# Définition de l'image de base
+FROM rocker/r-ver:latest
+
+# Mise à jour des paquets et installation des dépendances
+RUN apt-get update && apt-get install -y \
+    libxml2-dev \
+    libssl-dev \
+    libcurl4-openssl-dev \
+    libgit2-dev
+
+# Installation de BioCManager
+RUN R -e "install.packages('BiocManager', repos='https://cran.rstudio.com/')"
+
+# Installation des packages R avec BioCManager
+RUN R -e "BiocManager::install(c('DESeq2', 'ggplot2', 'readr', 'RColorBrewer','fdrtool'))"
+
+#création dossier
+RUN mkdir dossier
+
+# Définition du point d'entrée
+CMD ["R"]

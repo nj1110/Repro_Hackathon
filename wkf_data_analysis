@@ -1,0 +1,30 @@
+# Définition des fichiers d'entrée
+counts = "count.txt"
+
+# Définition des règles
+rule all:
+    # Définition de la liste des fichiers de sortie
+    input:
+        "PCA_hackathon.pdf",
+        "heatmap.pdf",
+        "residuals_pvalue.pdf"
+        "volcano_plot_genes.pdf"
+        "volcano_plot_all_genes.pdf"
+
+rule dispersion_genes:
+    # Spécification des entrées
+    input:
+        counts
+    # Spécification des sorties
+    output:
+        "PCA_hackathon.pdf",
+        "heatmap.pdf",
+        "residuals_pvalue.pdf"
+        "volcano_plot_genes.pdf"
+        "volcano_plot_all_genes.pdf"
+    # Utilisation de l'image Docker
+    container:
+        "froeuhouais/r_image"
+    # Exécution du script R
+    shell:
+        'docker run -v $(pwd):/dossier/ -it froeuhouais/r_image Rscript dossier/script_8SRR_v5.R'
